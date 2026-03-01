@@ -14,7 +14,7 @@ services:
       - SQUADHUB_TOKEN=${SQUADHUB_TOKEN}
       - SQUADHUB_STATE_DIR=/squadhub-data/config
     volumes:
-      - squadhub-data:/squadhub-data:ro
+      - ./squadhub-data:/squadhub-data:ro
     depends_on:
       squadhub:
         condition: service_healthy
@@ -30,7 +30,7 @@ services:
       - SQUADHUB_TOKEN=${SQUADHUB_TOKEN}
       - CONVEX_URL=${CONVEX_URL}
     volumes:
-      - squadhub-data:/data
+      - ./squadhub-data:/data
     healthcheck:
       test: ["CMD", "wget", "-q", "--spider", "http://localhost:18789/health"]
       interval: 5s
@@ -50,7 +50,3 @@ services:
       squadhub:
         condition: service_healthy
     restart: unless-stopped
-
-volumes:
-  squadhub-data:
-    driver: local

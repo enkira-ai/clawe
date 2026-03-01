@@ -33,13 +33,33 @@
         }
       },
       {
-        "id": "inky",
-        "name": "Inky",
-        "workspace": "/data/workspace-inky",
+        "id": "chiron",
+        "name": "Chiron",
+        "workspace": "/data/workspace-chiron",
         "model": "anthropic/claude-sonnet-4-20250514",
         "identity": {
-          "name": "Inky",
-          "emoji": "✍️"
+          "name": "Chiron",
+          "emoji": "🦾"
+        }
+      },
+      {
+        "id": "sage",
+        "name": "Sage",
+        "workspace": "/data/workspace-sage",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Sage",
+          "emoji": "🧠"
+        }
+      },
+      {
+        "id": "forge",
+        "name": "Forge",
+        "workspace": "/data/workspace-forge",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Forge",
+          "emoji": "🔧"
         }
       },
       {
@@ -49,7 +69,27 @@
         "model": "anthropic/claude-sonnet-4-20250514",
         "identity": {
           "name": "Pixel",
-          "emoji": "🎨"
+          "emoji": "📐"
+        }
+      },
+      {
+        "id": "echo",
+        "name": "Echo",
+        "workspace": "/data/workspace-echo",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Echo",
+          "emoji": "📢"
+        }
+      },
+      {
+        "id": "vox",
+        "name": "Vox",
+        "workspace": "/data/workspace-vox",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Vox",
+          "emoji": "🎙️"
         }
       },
       {
@@ -59,7 +99,7 @@
         "model": "anthropic/claude-sonnet-4-20250514",
         "identity": {
           "name": "Scout",
-          "emoji": "🔍"
+          "emoji": "🔭"
         }
       }
     ]
@@ -74,8 +114,12 @@
       "enabled": true,
       "allow": [
         "main",
-        "inky",
+        "chiron",
+        "sage",
+        "forge",
         "pixel",
+        "echo",
+        "vox",
         "scout"
       ]
     }
