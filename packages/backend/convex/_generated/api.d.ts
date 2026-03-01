@@ -18,6 +18,7 @@ import type * as lib_auth from "../lib/auth.js";
 import type * as lib_helpers from "../lib/helpers.js";
 import type * as messages from "../messages.js";
 import type * as notifications from "../notifications.js";
+import type * as patchTenant from "../patchTenant.js";
 import type * as routines from "../routines.js";
 import type * as tasks from "../tasks.js";
 import type * as tenants from "../tenants.js";
@@ -41,6 +42,7 @@ declare const fullApi: ApiFromModules<{
   "lib/helpers": typeof lib_helpers;
   messages: typeof messages;
   notifications: typeof notifications;
+  patchTenant: typeof patchTenant;
   routines: typeof routines;
   tasks: typeof tasks;
   tenants: typeof tenants;

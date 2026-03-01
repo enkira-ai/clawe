@@ -57,4 +57,5 @@ convex/_generated
 .squadhub/*
 !.squadhub/.gitkeep
 .squadhub/logs/*
-!.squadhub/logs/.gitkeep
+!.squadhub/logs/.gitkeepsquadhub-local/
+squadhub-data/

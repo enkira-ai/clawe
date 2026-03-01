@@ -1,0 +1,171 @@
+{
+  "env": {
+    "CONVEX_URL": "https://affable-caribou-155.convex.cloud"
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "token"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "/home/bwen/clawe/squadhub-local/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "Clawe",
+        "workspace": "/home/bwen/clawe/squadhub-local/workspace",
+        "identity": {
+          "name": "Clawe",
+          "emoji": "\ud83e\udd9e"
+        }
+      },
+      {
+        "id": "chiron",
+        "name": "Chiron",
+        "workspace": "/home/bwen/clawe/squadhub-local/workspace-chiron",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Chiron",
+          "emoji": "\ud83e\uddbe"
+        }
+      },
+      {
+        "id": "sage",
+        "name": "Sage",
+        "workspace": "/home/bwen/clawe/squadhub-local/workspace-sage",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Sage",
+          "emoji": "\ud83e\udde0"
+        }
+      },
+      {
+        "id": "forge",
+        "name": "Forge",
+        "workspace": "/home/bwen/clawe/squadhub-local/workspace-forge",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Forge",
+          "emoji": "\ud83d\udd27"
+        }
+      },
+      {
+        "id": "pixel",
+        "name": "Pixel",
+        "workspace": "/home/bwen/clawe/squadhub-local/workspace-pixel",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Pixel",
+          "emoji": "\ud83d\udcd0"
+        }
+      },
+      {
+        "id": "echo",
+        "name": "Echo",
+        "workspace": "/home/bwen/clawe/squadhub-local/workspace-echo",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Echo",
+          "emoji": "\ud83d\udce2"
+        }
+      },
+      {
+        "id": "vox",
+        "name": "Vox",
+        "workspace": "/home/bwen/clawe/squadhub-local/workspace-vox",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Vox",
+          "emoji": "\ud83c\udf99\ufe0f"
+        }
+      },
+      {
+        "id": "scout",
+        "name": "Scout",
+        "workspace": "/home/bwen/clawe/squadhub-local/workspace-scout",
+        "model": "anthropic/claude-sonnet-4-20250514",
+        "identity": {
+          "name": "Scout",
+          "emoji": "\ud83d\udd2d"
+        }
+      }
+    ]
+  },
+  "tools": {
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "main",
+        "chiron",
+        "sage",
+        "forge",
+        "pixel",
+        "echo",
+        "vox",
+        "scout"
+      ]
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18790,
+    "mode": "local",
+    "bind": "lan",
+    "auth": {
+      "mode": "token",
+      "token": "d4fabe31b08b6dbde2e550f4984ab8104ecaa0c93b33450b508301ed17620404"
+    },
+    "tools": {
+      "allow": [
+        "gateway"
+      ]
+    },
+    "http": {
+      "endpoints": {
+        "chatCompletions": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "discord": {
+        "enabled": true
+      }
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.2.17",
+    "lastTouchedAt": "2026-03-01T03:21:44.144Z"
+  }
+}
